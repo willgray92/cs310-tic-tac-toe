@@ -1,7 +1,15 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package edu.jsu.mcis;
 
+/**
+ *
+ * @author will
+ */
 public class TicTacToeMove {
-    
     private final int row;
     private final int col;
 
@@ -16,6 +24,6 @@ public class TicTacToeMove {
 
     public int getCol() {
         return col;
-    }
     
+}
 }

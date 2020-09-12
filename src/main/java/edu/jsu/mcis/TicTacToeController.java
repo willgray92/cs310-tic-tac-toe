@@ -1,5 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package edu.jsu.mcis;
 
+/**
+ *
+ * @author will
+ */
 public class TicTacToeController {
 
     private final TicTacToeModel model;
@@ -26,6 +35,19 @@ public class TicTacToeController {
            using the View's "showInputError()" if the move is invalid. */
 
         // INSERT YOUR CODE HERE
+        while(!model.isGameover()){
+            
+            view.showBoard(model.toString());
+            
+            TicTacToeMove move = view.getNextMove(model.isXTurn());
+            
+            if(!model.makeMark(move.getRow(), move.getCol()));
+            view.showInputError();           
+        
+        
+        
+            }
+
         
         /* After the game is over, show the final board and the winner */
 
@@ -34,5 +56,7 @@ public class TicTacToeController {
         view.showResult(model.getResult().toString());
         
     }
+    }
+ 
+    
 
-}
