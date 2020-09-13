@@ -1,34 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.jsu.mcis;
+
 import java.awt.*;
 import javax.swing.*;
 
-/**
- *
- * @author will
- */
-
+public class TicTacToeView extends JPanel {
     
-import java.util.Scanner;
-
-public class TicTacToeView extends JPanel{
-    
-   
     private final TicTacToeController controller;
 
     private final JButton[][] board;
     private final JPanel squaresPanel;
     private final JLabel resultLabel;
-    private int width;
 
     public TicTacToeView(TicTacToeController controller, int width) {
 
         this.controller = controller;
-        this.width = width;
 
         this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         board = new JButton[width][width];
@@ -61,15 +46,7 @@ public class TicTacToeView extends JPanel{
 
         /* Refresh the GUI with updated data from the Model (via the Controller) */
 
-        for(int i = 0; i < board.length; ++i){
-            for(int j = 0; j < board.length; ++j){
-                String xoro = controller.getMarkAsString(i,j);
-                System.out.print(xoro);
-                board[i][j].setText(xoro);
-                
-                
-            }
-        }
+        // INSERT YOUR CODE HERE
 
     }
     
@@ -77,12 +54,7 @@ public class TicTacToeView extends JPanel{
 
         /* Disable buttons (to disallow input after game is over) */
     
-        for(int i = 0; i < width; ++i){
-            for(int j = 0; j < width; ++ j){
-                board[i][j].setEnabled(false);
-            }
-
-        }
+        // INSERT YOUR CODE HERE
             
     }
         

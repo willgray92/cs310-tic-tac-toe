@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package edu.jsu.mcis;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 /**
  *
  * @author will
  */
-public class TicTacToe {
+public class TicTacToe extends JPanel {
 
     /**
      * @
@@ -43,7 +46,12 @@ public class TicTacToe {
         
         /* Start Main Loop */
         
-        controller.start();
+       // controller.start();
+        JFrame win = new JFrame("Tic-Tac-Toe");
+        win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        win.add(controller.getView());
+        win.pack();
+        win.setVisible(true);
     }
     
 }
